@@ -3,7 +3,7 @@ import numpy as np
 
 PIC_WID  = 640     # Standard high-definition picture width
 PIC_HGT  = 360     # Standard high-definition picture height
-N_FRAMES =  10      # Three seconds, at 30 fps
+N_FRAMES =  300      # Three seconds, at 30 fps
 
 MAX_RAD = np.sqrt((PIC_WID/2)**2.0 + (PIC_HGT/2)**2.0);
 
@@ -20,7 +20,7 @@ for t in range(N_FRAMES):                                               # t will
 
             val = 0.5 + 0.5*np.cos(t/5 + y/10) ** 2;                    # Creating vertical lines that move horizontally 
 
-            picture[y,x,0] = val*4;                                       # defining the RGB values
+            picture[y,x,0] = val*4;                                     # defining the RGB values
             picture[y,y,1] = 2.0/(r**0.2);                                
             picture[y,x,2]  = 1.0 - val*4;         
                                    
